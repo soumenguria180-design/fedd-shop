@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>মা নাচিন্দা সুমন সৌমেন ফিড সেন্টার</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600&family=Noto+Serif+Bengali:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F2F5F6;--surface:#FFFFFF;--ink:#0E2229;--muted:#55696F;--line:#D5DEE0;
+  --brand:#0A3440;--brand-ink:#FFFFFF;--gold:#C9A24B;--gold-ink:#1E1704;--wa:#168F4A;--wa-ink:#FFFFFF;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#0A161B;--surface:#102229;--ink:#E8EFF1;--muted:#9FB3B9;--line:#25404A;--brand:#0F4756;--brand-ink:#FFFFFF;--gold:#D4AE5A;--gold-ink:#1E1704;--wa:#1FA85A;--wa-ink:#06210F}
+}
+:root[data-theme="dark"]{--bg:#0A161B;--surface:#102229;--ink:#E8EFF1;--muted:#9FB3B9;--line:#25404A;--brand:#0F4756;--brand-ink:#FFFFFF;--gold:#D4AE5A;--gold-ink:#1E1704;--wa:#1FA85A;--wa-ink:#06210F}
+html{scroll-padding-top:env(safe-area-inset-top,0px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Hind Siliguri","Noto Sans Bengali","Segoe UI",system-ui,sans-serif;font-size:17px;line-height:1.6;padding-bottom:96px}
+a{color:inherit}
+.wrap{max-width:860px;margin:0 auto;padding:0 18px}
+header{background:var(--brand);color:var(--brand-ink);border-bottom:3px solid var(--gold)}
+.top{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:12px 0}
+.top b{font-size:15px;font-weight:500;color:var(--gold);letter-spacing:.3px}
+.lang{display:flex;border:1.5px solid rgba(255,255,255,.55);border-radius:999px;overflow:hidden}
+.lang button{font:inherit;font-size:14px;font-weight:600;padding:4px 14px;border:0;background:transparent;color:var(--brand-ink);cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--gold);color:var(--gold-ink)}
+.hero{padding:44px 0 58px}
+.hero h1{font-family:"Noto Serif Bengali","Hind Siliguri",serif;font-size:clamp(28px,6.6vw,48px);line-height:1.4;font-weight:700;margin:0 0 16px;max-width:15em}
+.hero p{margin:0 0 22px;max-width:30em;font-size:18px;opacity:.92}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:0 26px;border-radius:6px;letter-spacing:.2px;font:inherit;font-weight:600;text-decoration:none;border:0;cursor:pointer}
+.btn.gold{background:var(--gold);color:var(--gold-ink)}
+.btn.ghost{border:1.5px solid rgba(255,255,255,.7);color:var(--brand-ink)}
+.btn.wa{background:var(--wa);color:var(--wa-ink)}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+section{padding:34px 0 6px}
+h2{font-family:"Noto Serif Bengali","Hind Siliguri",serif;font-size:26px;line-height:1.4;margin:0 0 6px}h2::after{content:"";display:block;width:48px;height:3px;background:var(--gold);margin-top:8px}
+.note{color:var(--muted);margin:0 0 16px;font-size:15px}
+.board{background:var(--surface);border:1px solid var(--line);border-top:3px solid var(--gold);border-radius:4px;box-shadow:0 14px 36px -18px rgba(10,52,64,.4);overflow:hidden}
+.row{display:grid;grid-template-columns:1fr auto;gap:8px 14px;align-items:center;padding:18px 20px;border-top:1px solid var(--line)}
+.row:first-child{border-top:0}
+.row h3{font-size:18px;margin:0;line-height:1.3}
+.row small{color:var(--muted);font-size:14px}
+.price{font-weight:700;font-size:19px;text-align:right}
+.qty{display:flex;align-items:center;gap:0;justify-self:end;border:1.5px solid var(--line);border-radius:10px;overflow:hidden}
+.qty button{width:42px;height:42px;border:0;background:var(--bg);color:var(--ink);font:inherit;font-size:22px;cursor:pointer}
+.qty output{min-width:38px;text-align:center;font-weight:600}
+.info{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
+.info div{background:var(--surface);border:1px solid var(--line);border-left:3px solid var(--gold);border-radius:4px;padding:18px 20px}
+.info h3{margin:0 0 4px;font-size:17px}
+.info p{margin:0}
+footer{margin-top:34px;padding:18px 0;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:var(--surface);border-top:3px solid var(--gold);box-shadow:0 -8px 24px -12px rgba(0,0,0,.25);padding:10px 0 calc(10px + env(safe-area-inset-bottom,0px))}
+.bar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.bar span{font-size:15px;line-height:1.3}
+.bar strong{font-size:19px;display:block}
+.bar .btn[aria-disabled="true"]{opacity:.45;pointer-events:none}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="top">
+      <b data-t="tag"></b>
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-l="bn" aria-pressed="true">বাংলা</button>
+        <button type="button" data-l="en" aria-pressed="false">English</button>
+      </div>
+    </div>
+    <div class="hero">
+      <h1 data-t="name"></h1>
+      <p data-t="sub"></p>
+      <div class="btns">
+        <a class="btn gold" href="tel:+919641116179" data-t="call"></a>
+        <a class="btn ghost" href="https://wa.me/919641116179" target="_blank" rel="noopener" data-t="wa"></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <section id="rates">
+    <h2 data-t="ratesH"></h2>
+    <p class="note" data-t="ratesN"></p>
+    <div class="board" id="board"></div>
+  </section>
+
+  <section id="contact">
+    <h2 data-t="contactH"></h2>
+    <div class="info">
+      <div><h3 data-t="addrH"></h3><p data-t="addr"></p></div>
+      <div><h3 data-t="phoneH"></h3><p><a href="tel:+919641116179">96411 16179</a></p></div>
+      <div><h3 data-t="waH"></h3><p><a href="https://wa.me/919641116179" target="_blank" rel="noopener">96411 16179</a><br><a href="https://wa.me/918695346246" target="_blank" rel="noopener">86953 46246</a></p></div>
+    </div>
+  </section>
+  <footer data-t="foot"></footer>
+</main>
+
+<div class="bar">
+  <div class="wrap">
+    <span><span data-t="total"></span><strong id="sum"></strong></span>
+    <a class="btn wa" id="order" href="#" target="_blank" rel="noopener" aria-disabled="true" data-t="order"></a>
+  </div>
+</div>
+
+<script>
+var PHONE="919641116179";
+var T={
+ bn:{tag:"ভানামি ফিড ও ওষুধ",name:"মা নাচিন্দা সুমন সৌমেন ফিড সেন্টার",
+  sub:"ভানামি ফিড ও ওষুধ এক জায়গায়। পছন্দের পণ্য বেছে হোয়াটসঅ্যাপে সরাসরি অর্ডার করুন।",
+  call:"ফোন করুন",wa:"হোয়াটসঅ্যাপে লিখুন",ratesH:"পণ্য ও দামের তালিকা",
+  ratesN:"দাম বাজারের সাথে বদলাতে পারে। অর্ডারের পর দোকান থেকে দাম নিশ্চিত করা হবে।",
+  contactH:"দোকানের ঠিকানা ও যোগাযোগ",addrH:"ঠিকানা",addr:"রাধাকৃষ্ণপুর পুরাতন বাজার",
+  phoneH:"ফোন",waH:"হোয়াটসঅ্যাপ",foot:"© মা নাচিন্দা সুমন সৌমেন ফিড সেন্টার",
+  total:"মোট (আনুমানিক)",order:"হোয়াটসঅ্যাপে অর্ডার করুন",none:"পণ্য বাছুন",
+  hello:"নমস্কার, আমি অর্ডার করতে চাই:",tot:"মোট (আনুমানিক)",add:"বাড়ান",sub:"কমান"},
+ en:{tag:"Vannamei feed & medicine",name:"Ma Nachinda Sumon Soumen Feed Center",
+  sub:"Vannamei feed and medicine in one place. Pick your items and order straight on WhatsApp.",
+  call:"Call now",wa:"Message on WhatsApp",ratesH:"Products and prices",
+  ratesN:"Prices can change with the market. The shop will confirm the price after you order.",
+  contactH:"Shop address and contact",addrH:"Address",addr:"Radhakrishnapur Puratan Bazar",
+  phoneH:"Phone",waH:"WhatsApp",foot:"© Ma Nachinda Sumon Soumen Feed Center",
+  total:"Total (approx.)",order:"Order on WhatsApp",none:"Choose items",
+  hello:"Hello, I would like to order:",tot:"Total (approx.)",add:"Increase",sub:"Decrease"}
+};
+var P=[
+ {bn:"ভানামি স্টার্টার ফিড",en:"Vannamei Starter Feed",sb:"২৫ কেজি বস্তা",se:"25 kg bag",p:2400},
+ {bn:"ভানামি গ্রোয়ার ফিড",en:"Vannamei Grower Feed",sb:"২৫ কেজি বস্তা",se:"25 kg bag",p:2200},
+ {bn:"ভানামি ফিনিশার ফিড",en:"Vannamei Finisher Feed",sb:"২৫ কেজি বস্তা",se:"25 kg bag",p:2100},
+ {bn:"প্রোবায়োটিক",en:"Probiotic",sb:"১ কেজি প্যাকেট",se:"1 kg pack",p:650},
+ {bn:"মিনারেল মিক্স",en:"Mineral Mix",sb:"১ কেজি প্যাকেট",se:"1 kg pack",p:280},
+ {bn:"পানি ও পুকুরের ওষুধ",en:"Water and Pond Treatment",sb:"১ লিটার বোতল",se:"1 litre bottle",p:450}
+];
+var lang="bn",Q=P.map(function(){return 0});
+function nf(n){return n.toLocaleString(lang==="bn"?"bn-IN":"en-IN")}
+function render(){
+  var t=T[lang];
+  document.documentElement.lang=lang;
+  document.title=t.name;
+  document.querySelectorAll("[data-t]").forEach(function(e){e.textContent=t[e.dataset.t]});
+  document.querySelectorAll("[data-l]").forEach(function(b){b.setAttribute("aria-pressed",b.dataset.l===lang)});
+  var h="";
+  P.forEach(function(x,i){
+    h+='<div class="row"><div><h3>'+x[lang]+'</h3><small>'+(lang==="bn"?x.sb:x.se)+'</small></div>'+
+    '<div class="price">₹'+nf(x.p)+'</div>'+
+    '<div></div><div class="qty"><button type="button" data-i="'+i+'" data-d="-1" aria-label="'+t.sub+'">−</button>'+
+    '<output>'+nf(Q[i])+'</output><button type="button" data-i="'+i+'" data-d="1" aria-label="'+t.add+'">+</button></div></div>';
+  });
+  document.getElementById("board").innerHTML=h;
+  var sum=0,lines=[];
+  P.forEach(function(x,i){if(Q[i]>0){sum+=Q[i]*x.p;lines.push("• "+x[lang]+" ("+(lang==="bn"?x.sb:x.se)+") × "+Q[i]+" = ₹"+(Q[i]*x.p))}});
+  document.getElementById("sum").textContent=sum>0?"₹"+nf(sum):t.none;
+  var o=document.getElementById("order");
+  if(sum>0){
+    var msg=t.hello+"\n"+lines.join("\n")+"\n"+t.tot+": ₹"+sum;
+    o.href="https://wa.me/"+PHONE+"?text="+encodeURIComponent(msg);
+    o.setAttribute("aria-disabled","false");
+  }else{o.href="#";o.setAttribute("aria-disabled","true")}
+}
+document.addEventListener("click",function(e){
+  var b=e.target.closest("button");if(!b)return;
+  if(b.dataset.l){lang=b.dataset.l;render()}
+  else if(b.dataset.i){var i=+b.dataset.i;Q[i]=Math.max(0,Q[i]+ +b.dataset.d);render()}
+});
+render();
+</script>
+</body>
+</html>
